@@ -17,6 +17,10 @@ jobs:
         with:
           fetch-tags: true
 
+      - name: Fetch tags
+        run: |
+          git fetch --tags
+
       - name: Get current tag
         id: vars
         run: echo "tag=`git describe --abbrev=0 --tags`" >> "$GITHUB_OUTPUT"
