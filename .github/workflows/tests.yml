@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '*'
+  workflow_dispatch:
 
 jobs:
   tagname:
@@ -11,7 +12,12 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+      - name: Get current tag
+        id: vars
+        run: |
+        git describe --abbrev=0 --tags ::set-output name=tag
 
-    - name: test-tagname
-      run: |
+      - name: test-tagname
+        run: |
         echo $GITHUB_REF_NAME
+        echo ${{ steps.vars.outputs.tag }}
