@@ -18,5 +18,5 @@ jobs:
 
       - name: test-tagname
         run: |
-        echo $GITHUB_REF_NAME
-        echo ${{ steps.vars.outputs.tag }}
+          echo $GITHUB_REF_NAME
+          echo ${{ steps.vars.outputs.tag }}
