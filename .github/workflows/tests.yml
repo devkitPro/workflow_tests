@@ -1,0 +1,17 @@
+name: Documentation
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  tagname:
+    name: 
+    runs-on: ubuntu-20.04
+
+    steps:
+
+    - name: test-tagname
+      run: |
+        echo $GITHUB_REF_NAME
