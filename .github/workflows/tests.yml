@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the Git repository
         uses: actions/checkout@v4
         with:
-          fetch_tags: true
+          fetch-tags: true
 
       - name: Get current tag
         id: vars
