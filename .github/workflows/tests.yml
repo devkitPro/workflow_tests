@@ -15,7 +15,7 @@ jobs:
       - name: Get current tag
         id: vars
         run: |
-        echo "tag=`git describe --abbrev=0 --tags`" >> $GITHUB_OUTPUT
+        echo "tag=`git describe --abbrev=0 --tags`" >> "$GITHUB_OUTPUT"
 
       - name: test-tagname
         run: |
